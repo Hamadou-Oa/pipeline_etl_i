@@ -1,0 +1,54 @@
+#  config.yaml — Configuration centralisée du pipeline ETL
+#  Les valeurs sensibles sont lues depuis les variables d'environnement
+
+# Sources de données
+sources:
+
+  web:
+    enabled: true
+    url: "https://books.toscrape.com/"
+    max_pages: 5          
+    delay_seconds: 0.5    
+  csv:
+    enabled: true
+    url: "https://drive.google.com/file/d/1s-x76gQ-eoM5sqT2Hhcfn087Aw5D__hD/view?usp=sharing"
+    output_dir: "data/raw"
+
+  sql:
+    enabled: true
+    query: |
+      SELECT
+        id::text        AS title,
+        email           AS availability,
+        NULL            AS price,
+        0               AS rating,
+        'sql'           AS source
+      FROM customers
+      LIMIT 500
+
+#Stockage MinIO 
+minio:
+  bucket: "datalake"
+  datasets:
+    raw:       "raw"
+    processed: "processed"
+    curated:   "curated"
+  partition_cols:
+    - "source"
+
+# Spark
+spark:
+  app_name: "ETL_Pipeline_Africa_Tech"
+  shuffle_partitions: 4
+  driver_memory: "1g"
+
+# Mon Pipeline 
+pipeline:
+  retry_attempts: 3
+  retry_delay_seconds: 5
+  fail_on_source_error: false   
+ 
+# Logging
+logging:
+  level: "INFO"   
+  format: "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"

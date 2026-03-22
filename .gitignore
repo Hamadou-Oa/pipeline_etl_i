@@ -1,0 +1,25 @@
+# Environnements Python
+venv/
+airflow_venv/
+*.pyc
+__pycache__/
+*.egg-info/
+
+# Données locales
+data/minio/
+data/raw/
+
+# Airflow
+airflow/logs/
+airflow/*.db
+airflow/*.pid
+
+# Fichiers système
+.env
+*.exe
+.coverage
+coverage_html/
+
+# IDE
+.vscode/
+*.log
