@@ -1,11 +1,11 @@
-# Pipeline ETL — Africa Tech Up Tour 🚀
+# Pipeline ETL — Africa Tech Up Tour 
 
 ![Tests](https://img.shields.io/badge/Tests-29%20passing-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.10-green)
 ![PySpark](https://img.shields.io/badge/PySpark-3.5.1-orange)
 ![Airflow](https://img.shields.io/badge/Airflow-2.9.3-red)
 
-Pipeline ETL professionnel — Projet de fin de cycle L3 Data Engineering.
+Pipeline ETL professionnel — Projet de fin de foramtion Data Engineering.
 
 ## Architecture
 ```
@@ -81,5 +81,5 @@ pipeline_etl_i/
 
 ## Auteur
 
-**Hamadou Oumarou Abdallah** — L3 Data Engineering  
+**Hamadou Oumarou Abdalahi** — Data Engineering  
 Africa Tech Up Tour — 2025/2026
