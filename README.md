@@ -81,5 +81,5 @@ pipeline_etl_i/
 
 ## Auteur
 
-**Hamadou Oumarou Abdalahi** — Data Engineering  
+**Hamadou Oumarou Abdoulahi** — Data Engineering  
 Africa Tech Up Tour — 2025/2026
